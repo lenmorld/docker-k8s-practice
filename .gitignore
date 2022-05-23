@@ -1,0 +1,4 @@
+node_modules/
+kubectl
+minikube-darwin-amd64
+.DS_Store
