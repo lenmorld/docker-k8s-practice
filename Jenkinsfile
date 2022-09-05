@@ -18,6 +18,9 @@ pipeline{
                     sh 'cd app/'
                     sh 'pwd'
                     sh 'ls'
+                    sh 'cd app/'
+                    sh 'pwd'
+                    sh 'ls'
                     sh 'npm install'
                 } 
             }   
