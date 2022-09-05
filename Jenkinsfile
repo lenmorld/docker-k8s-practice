@@ -15,7 +15,9 @@ pipeline{
                 script {
                     sh 'pwd'
                     sh 'ls'
-                    sh 'cd /home/app'
+                    sh 'cd app/'
+                    sh 'pwd'
+                    sh 'ls'
                     sh 'npm install'
                 } 
             }   
