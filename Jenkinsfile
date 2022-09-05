@@ -15,6 +15,7 @@ pipeline{
                 dir("app") {
                     sh "pwd"
                     sh 'ls'
+                    sh 'echo test'
                     sh 'npm install'
                 }
             }   
