@@ -59,7 +59,7 @@ https://www.notion.so/lennythedev/docker-k8s-again-25c8bc0e16a54751abe5d9b8c9f13
         docker push 656985594497.dkr.ecr.ca-central-1.amazonaws.com/my-app-2:latest
         ```
 
-    2b. Push to Dockerhun
+    2b. Push to Dockerhub
         - https://hub.docker.com/r/lenmorld/docker-k8s-practice
 
         ```
