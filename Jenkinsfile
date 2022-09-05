@@ -13,7 +13,7 @@ pipeline{
         stage('Build') {
             steps {
                 script {
-                    sh 'cd app/'
+                    sh 'cd /home/app'
                     sh 'npm install'
                 } 
             }   
