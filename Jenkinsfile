@@ -12,17 +12,11 @@ pipeline{
     stages {
         stage('Build') {
             steps {
-                script {
-                    sh 'pwd'
-                    sh 'ls'
-                    sh 'cd app/'
-                    sh 'pwd'
-                    sh 'ls'
-                    sh 'cd app/'
-                    sh 'pwd'
+                dir("app") {
+                    sh "pwd"
                     sh 'ls'
                     sh 'npm install'
-                } 
+                }
             }   
         }
         stage('Building image') {
