@@ -15,7 +15,7 @@ pipeline{
                 dir("app") {
                     sh "pwd"
                     sh 'ls'
-                    sh 'echo test'
+                    sh 'echo test 2'
                     sh 'npm install'
                 }
             }   
@@ -23,23 +23,23 @@ pipeline{
         stage('Building image') {
             steps{
                 script {
-                    dockerImage = docker.build registry + ":latest"
+                        dockerImage = docker.build registry + ":latest"
                     }
                 }
             }
             stage('Push Image') {
-                steps{
+                steps {
                     script {
-                        docker.withRegistry( '', registryCredential){                            
-                        dockerImage.push()
+                            docker.withRegistry( '', registryCredential) {                            
+                            dockerImage.push()
                         }
                     }
                 } 
             }
             stage('Deploying into k8s'){
-            steps{
-                sh 'kubectl apply -f webapp-deployment.yaml' 
-            }
+                steps{
+                    sh 'kubectl apply -f webapp-deployment.yaml' 
+                }
         }
     }
 }
